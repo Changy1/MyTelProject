@@ -1,6 +1,11 @@
 @import './modules/_home';
+<<<<<<< HEAD
 
 @import './modules/_job';
+=======
+@import './modules/_job';
+@import './modules/_register';
+>>>>>>> b7e85904584d7fa2a1983e9e063a028b34ec4481
 *{
     padding: 0;
     margin:0;
@@ -9,6 +14,12 @@
 ul,li{
     list-style: none;
 }
+<<<<<<< HEAD
+=======
+a{
+    text-decoration: none;
+}
+>>>>>>> b7e85904584d7fa2a1983e9e063a028b34ec4481
 body{
     background-color: #f5f5f5;
 }
