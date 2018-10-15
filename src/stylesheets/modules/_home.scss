@@ -1,0 +1,95 @@
+.header{
+    height: 4rem;
+    background: red;
+}
+.nav{
+    background-color: #fff;
+    height: 2.666667rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .346667rem;
+    .nav-items{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 1.28rem;
+        }
+        span{
+            margin-top: .2rem;
+            font-size: .4rem;
+            color: #5a647a;
+        }
+    }
+}
+.list{
+    background-color: #fff;
+    margin-top: .266667rem;
+    padding: .186667rem .466667rem 0;
+    .lists{
+        padding-bottom: .466667rem;
+        margin-bottom: .4rem;
+        border-bottom: 1px solid #ebeff2;
+        display: flex;
+        .lists-left{
+            width: 1.6rem;
+            height: 1.6rem;
+            img{
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+        .lists-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin-left: .266667rem;
+            .lists-right-top{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .lists-top-p1{
+                    font-size: .426667rem;
+                    color: #5a647a;
+                }
+                .lists-top-p2{
+                    font-size: 24px;
+                    color: #d2dbef;
+                }
+            }
+            .lists-right-center{
+                color:#bdc9da;
+                font-size: .333333rem;
+            }
+            .lists-right-bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                font-size: .333333rem;
+                color: #d2dbef;
+                .lists-bottom-span3{
+                    font-size: 28px;
+                    color: #f96969;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.footer{
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 32px 0 rgba(103, 103, 103, 0.13); 
+    height: 1.306667rem;
+    display: flex;
+    justify-content: space-around;
+    .footer-item{
+        display: flex;
+        align-items: center; 
+    }
+}
