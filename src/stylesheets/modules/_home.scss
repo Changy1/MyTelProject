@@ -111,7 +111,21 @@
     font-size: .373333rem;
     justify-content: space-around;
     .footer-item{
-        display: flex;
-        align-items: center; 
+        a{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            span{
+                font-size: .333333rem;
+            }
+        }
     }
+    .icon {
+        width: .666667rem; height: .666667rem;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+     }
 }
