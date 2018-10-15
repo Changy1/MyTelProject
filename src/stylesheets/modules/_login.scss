@@ -1,0 +1,79 @@
+body{
+    background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-bg.png');
+    font-family: "PingFang SC", "Microsoft YaHei", Verdana, Arial;
+    font-size: .373333rem;
+}
+.login-box{
+    padding: 0 1.173333rem;
+    margin-top: 2.666667rem;
+    .login-input{
+        width: 100%;
+        line-height: .56rem;
+        padding: .453333rem 0;
+        font-size: .426667rem;
+        color: #333;
+        background: transparent;
+        outline: none;
+        border: none;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dce2ee;
+    }
+    .login-input::-webkit-input-placeholder{
+        color: #dce2ee;
+    }
+    .login-user{
+        margin-bottom: .346667rem; 
+    }
+    .login-forget{
+        display: flex;
+        justify-content: space-between;
+        span{
+            margin-top: .4rem;
+            color: #b9c1d4;
+            font-size: .373333rem;
+        }
+        a{
+            margin-top: .4rem;
+            color: #6698ff;
+            font-size: .373333rem;
+        }
+    }
+    .login-button{
+        font-size: .426667rem;
+        margin-top: 1.333333rem;
+        width: 100%;
+        height: 1.306667rem;
+        line-height: 1.306667rem;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-bbg.png');
+    }
+    .login-OR{
+        margin: 1.2rem 0 .8rem 0;
+        width: 100%;
+        font-size: .373333rem;
+        color: #b9c1d4;
+        text-align: center;
+    }
+    .login-other{
+        display: flex;
+        justify-content: space-around;
+        div{
+            width: .666667rem;
+            height: .666667rem;
+        }
+        .login-other-alipay{
+            background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-alipay.png');
+        }
+        .login-other-weibo{
+            background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-wb.png');
+        }
+        .login-other-wechat{
+            background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-wx.png');
+        }
+        .login-other-qq{
+            background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-qq.png');
+        }
+    }
+}
