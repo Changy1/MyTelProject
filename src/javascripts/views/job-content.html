@@ -1,0 +1,16 @@
+{{#each _job_list}}
+<li class="list-job">
+        <a class="list-job-item">
+            <img class="left" src="{{this.logo_url}}">
+            <div class="midder">
+                <span>{{this.company_name}}</span>
+                <span>{{this.city}}/每周5天</span>
+                <span>{{this.job}}</span>
+            </div>
+            <div class="right">
+                <span>10-13-14:10</span>
+                <span>￥{{this.minsalary}}-{{this.maxsalary}}/天</span>
+            </div>
+        </a>
+</li>
+{{/each}}
