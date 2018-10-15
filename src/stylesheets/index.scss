@@ -1,11 +1,22 @@
 @import './modules/_home';
+<<<<<<< HEAD
 @import './modules/_login';
 @import './modules/_personal';
 
+=======
+@import './modules/_job';
+@import './modules/_register';
+>>>>>>> job
 *{
     padding: 0;
     margin:0;
     font-family: 'myFont',PingFang SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
 }
 body{
     background-color: #f5f5f5;

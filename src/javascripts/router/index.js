@@ -9,7 +9,7 @@ class Router {
     constructor ({ initial }) {
         
         this.routes = routes; // 路由表
-        this.initial = initial || '#/job'; // 默认路由
+        this.initial = initial || '#/home_job'; // 默认路由
         // this.currentUrl = ''; // 记录当前的路径（hash值）
     }
 
@@ -40,20 +40,20 @@ class Router {
         }
 
         this.routes[hash].render();
-        this.switchTab();
+        // this.switchTab();
     }
 
 
-    switchTab () {
-        // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性
-        $('.nav-link').each(function (item){
-            if ( $(this).attr('path') === location.hash ) {
-                $(this).addClass('active');
-            }else {
-                $(this).removeClass('active');
-            }
-        })
-    }
+    // switchTab () {
+    //     // 要求需要根据路由切换而切换active类名的元素，必须加上nav-link类名，并且加上path属性
+    //     $('.nav-link').each(function (item){
+    //         if ( $(this).attr('path') === location.hash ) {
+    //             $(this).addClass('active');
+    //         }else {
+    //             $(this).removeClass('active');
+    //         }
+    //     })
+    // }
 
     listenHashChange () { // 监听hash值变化的
         window.addEventListener('load', this.refresh.bind(this));

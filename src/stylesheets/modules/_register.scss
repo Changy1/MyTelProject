@@ -1,0 +1,88 @@
+a {
+  text-decoration: noen;
+  color: #666;
+}
+
+input {
+  border: none;
+}
+
+.input-wrap {
+  padding: 0 1.173333rem;
+  margin-top: 2.4rem;
+  font-size: .373333rem;
+}
+
+.input-wrap .input-row {
+  margin-bottom: .346667rem;
+}
+
+.input-wrap .input-row input {
+  width: 100%;
+  line-height: .56rem;
+  padding: .453333rem 0;
+  border-bottom: 1px solid #dce2ee;
+  font-size: .426667rem;
+  color: #333;
+  background-color: transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.input-wrap .yzm-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrap .yzm-row input {
+  width: 65%;
+}
+
+.input-wrap .yzm-row .graph-code {
+  width: 2.4rem;
+  height: .933333rem;
+  line-height: .933333rem;
+  text-align: center;
+  margin-top: .266667rem;
+  color: red;
+}
+
+.input-wrap .yzm-row .phone-code {
+  width: 2.4rem;
+  height: .933333rem;
+  line-height: .933333rem;
+  text-align: center;
+  margin-top: .266667rem;
+  color: white;
+  background: linear-gradient(red, blue);
+}
+
+.input-wrap .tip {
+  margin: .666667rem 0;
+  font-size: .346667rem;
+  color: #b9c1d4;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrap .tip input {
+  border: .013333rem solid #6aa2e4;
+  width: .266667rem;
+  height: .266667rem;
+  background: #6aa2e4;
+}
+
+.input-wrap .tip a {
+  color: #6aa2e4;
+}
+
+.input-wrap .register-btn {
+  margin-top: 0;
+  height: 1.306667rem;
+  line-height: 1.306667rem;
+  font-size: .426667rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(red, blue);
+}
