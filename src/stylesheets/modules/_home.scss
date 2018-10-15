@@ -1,6 +1,27 @@
 .header{
     height: 4rem;
-    background: red;
+    .swiper-wrapper{
+        height: 100%;
+        width: 100%;
+    }
+    .swiper-slide{
+        height: 100%;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .swiper-pagination{
+        bottom: .466667rem !important;
+    }
+    .swiper-pagination-bullet{
+        height: .213333rem;
+        width: .213333rem;
+    }
+    .swiper-pagination-bullet-active{
+        background: #fff;
+    }
 }
 .nav{
     background-color: #fff;
