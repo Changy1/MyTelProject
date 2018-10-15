@@ -1,0 +1,83 @@
+.personal-header{
+    padding: 0 .4rem;
+    height: 2.773333rem;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    img{
+        height: 1.706667rem;
+        width: 1.706667rem;
+
+    }
+    .personal-header-tag{
+        font-size: .346667rem;
+        color: #95a0a8;
+        padding-left: .533333rem;
+    }
+}
+.personal-list{
+    ul{
+        margin-top: .4rem;
+        list-style: none;
+        background: #fff;
+        li{
+            position: relative;
+            padding: .333333rem;
+            font-size: .426667rem;
+            color: #333;
+            border-bottom: solid 1px #eaeaea;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                right: .426667rem;
+                top: .466667rem;
+                width: .4rem;
+                height: .466667rem;
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17…') no-repeat -180px -93px;
+            }
+            a{
+                height: inherit;
+                display: inline-block;
+                width: 100%;
+                i{
+                    margin-right: .266667rem;
+                    display: inline-block;
+                    width: .533333rem;
+                    height: .6rem;
+                    vertical-align: sub;
+                }
+            }
+        }
+        .personal-list-send{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17…') no-repeat -90px 0;
+            }
+        }
+        .personal-list-collect{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17fe18892e29f7b476e6e413939')  no-repeat -135px 2px;
+            }
+        }
+        .personal-list-resume{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17fe18892e29f7b476e6e413939') no-repeat 0 2px;
+            }
+        }
+        .personal-list-invite{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17fe18892e29f7b476e6e413939') no-repeat -45px 3px;
+            }
+        }
+        .personal-list-service{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17fe18892e29f7b476e6e413939') no-repeat -45px -172px;
+            }
+        }
+        .personal-list-set{
+            i{
+                background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/icon.png?v=e7c9f17fe18892e29f7b476e6e413939') no-repeat -180px 4px;
+            }
+        }
+    }
+}

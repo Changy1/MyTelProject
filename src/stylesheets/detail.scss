@@ -1,0 +1,219 @@
+/*公共部分*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: noen;
+    color: #666;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+/*头部*/
+.head{
+    width: 100%;
+    background-color: #fff;
+    border-bottom: .013333rem solid #eaeaea;
+    box-shadow: 0 .013333rem .266667rem .04rem #efefef;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    .wrap{
+        padding: .24rem .333333rem;
+        display: flex;
+        .left{
+            width: 2.12rem;
+            img{
+                width: 100%;
+                margin-top: .04rem;
+            }
+        }
+        .right{
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            .btn{
+                margin-left: .266667rem;
+                padding: .133333rem .266667rem;
+                background-color: #10a6e2;
+                color: #fff;
+                border: 1px solid #10a6e2;
+                border-radius: .066667rem;
+                box-sizing: border-box;
+                font-size: .373333rem;
+            }
+            .btn-right{
+                background-color: #fff;
+                color: #10a6e2;
+            }
+        }
+    }
+}
+.content{
+    width: 100%;
+    margin-top: 1.133333rem;
+    margin-bottom: 1.133333rem;
+    .job-detail-header{
+        width: 100%;
+        padding: .586667rem 0 0 .426667rem;
+        box-sizing: border-box;
+        .job-title-wrap{
+            display: flex;
+            padding-right: .426667rem;
+            justify-content: space-between;
+            h3{
+                font-size: .533333rem;
+                font-weight: 500;
+            }
+            span{
+                font-size: .32rem;
+                color: #999;
+            }
+        }
+        .job-tag {
+            margin-top: .44rem;
+            padding-right: .426667rem;
+            font-size: .373333rem;
+            color: #10a6e2;
+            text-align: left;
+        }
+        .tag-wrap{
+            margin-top: .853333rem;
+            padding-bottom: .08rem;
+            text-align: left;
+            border-bottom: dashed .013333rem #eaeaea;
+            span{
+                margin-bottom: .386667rem;
+                display: inline-block;
+                padding: .133333rem .266667rem;
+                margin-right: .36rem;
+                border-radius: .106667rem;
+                background-color: #fafafa;
+                border: solid 1px #eaeaea;
+                font-size: .32rem;
+                color: #666;
+            }
+        }
+        .job-detail-header_last{
+            display: flex;
+            padding: .466667rem 0 .4rem;
+            width: 100%;
+            img{
+                width: 1.44rem;
+                height: 1.44rem;
+            }
+            .job-info{
+                margin-left: .266667rem;
+                font-size: .373333rem;
+                flex-grow: 1;
+                padding-right:.426667rem; 
+                .job-info_more{
+                    display: flex;
+                    justify-content: space-between;
+                    span:last-child{
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+    /*职位信息*/
+    .tab-content{
+        .content-wrap{
+            width:100%;
+            padding-top: .32rem;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            h2{
+                box-sizing: border-box;
+                float: left;
+                width: 100%;
+                font-size: .426667rem;
+                background-color: #fff;
+                padding: .4rem 0 .4rem;
+                border-bottom: dashed 1px #eaeaea;
+                padding-left: .453333rem;
+            }
+            .content-intro{
+                padding: .44rem .453333rem;
+                width: 100%;
+                font-size: .373333rem;
+                box-sizing: border-box;
+                color: #666;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+            .tag-wrap{
+                padding-right: 0;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+                width: 100%;
+                background-color: #fff;
+                padding: .44rem .453333rem;
+                .address{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        margin-bottom: .133333rem;
+                        font-size: .426667rem;
+                        color: #333;
+                    }
+                    span:last-child{
+                        padding-left: .613333rem;
+                        font-size: .373333rem;
+                        margin-bottom: .4rem;
+                    }
+                }
+                .end-time{
+                    margin-bottom: .2rem;
+                    font-size: .373333rem;
+                    span{
+                        color: #666; 
+                    }
+                }
+            }
+        }
+    }
+    
+}
+/*尾部*/
+.foot{
+    position: fixed;
+    padding: .173333rem .4rem;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+    height: 1.306667rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    span{
+        text-align: center;
+        height: .96rem;
+        line-height: .96rem;
+        font-size: .373333rem;
+    }
+    span:first-child{
+        width: 70%;
+        
+        border-radius: .053333rem;
+        background-color: #10a6e2;
+        color: #fff;
+    }
+    span:last-child{
+        width: 27%;
+        border-radius: .053333rem;
+        background-color: #fafafa;
+        border: solid 1px #ccc;
+        color: #666;
+        margin-left: 3%;
+    }
+}
