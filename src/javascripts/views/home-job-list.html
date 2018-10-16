@@ -1,0 +1,20 @@
+<!-- 首页职位列表 -->
+{{#each _job_list}}
+<div class='lists'>
+    <div class='lists-left'>
+        <img src='{{this.logo_url}}'>
+    </div>
+    <div class='lists-right'>
+        <div class='lists-right-top'>
+            <p class='lists-top-p1'>{{this.job}}</p>
+            <p class='lists-top-p2'>10-12-14:10</p>
+        </div>
+        <div class='lists-right-center'>{{this.company_name}}</div>
+        <div class='lists-right-bottom'>
+            <span class='lists-bottom-span1'>{{this.city}}</span>
+            <span class='lists-bottom-span2'>{{this.month_num}}个月</span>
+            <span class='lists-bottom-span3'>￥{{this.minsalary}}-{{this.maxsalary}}/天</span>
+        </div>
+    </div>
+</div>
+{{/each}}
