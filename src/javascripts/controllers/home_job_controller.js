@@ -1,12 +1,12 @@
 import home_job_template from '../views/home-job.html';
 import home_job_list from '../views/home-job-list.html';
 import job_list from '../models/home_job_model';
+import BScroll from 'better-scroll';
 
+let _p = 1;
 const render = ()=>{
     $('.home-container').html(home_job_template);
 
-    let _p = 1;
-    getJoblist(_p);
 
     var mySwiper = new Swiper('.swiper-container', {
         autoplay: {
@@ -18,13 +18,13 @@ const render = ()=>{
             el: '.swiper-pagination',
         },
     })
+    handleContentScroll();
 }
 
 const getJoblist = async (_p)=>{
     let date = await job_list.job_list(_p);
     let _job_data = JSON.parse(date);
     let _job_list = _job_data.msg;
-
     let _template = Handlebars.compile(home_job_list);
     let _html = _template({_job_list});
     //这里当他请求完成以后会开启一个两秒的定时器。
@@ -35,6 +35,43 @@ const getJoblist = async (_p)=>{
     setTimeout(function(){
         $('.list').append(_html);
     },2000)
+}
+
+//这里是
+const handleContentScroll = async () => {
+
+    let _o_scroll = $('.scroll-info');
+    let _o_scroll_title = $('.scroll-info__title');
+    //实例化BScroll
+    let _job_scroll = new BScroll('.bscroll',{
+        probeType: 2
+    })
+    await getJoblist();     //初始加载第一页
+    _job_scroll.refresh();
+
+    _job_scroll.on('scrollEnd', async ({ x , y }) => {
+        let flag = true;
+        if(_job_scroll.maxScrollY - y > 0 && flag ){//可以滚动的最大距离，和当前滚动的距离
+            flag = false;
+            _p++;
+            if( _p > 4 ){
+                _o_scroll_title.on('tap', () => {
+                    location.hash = '#/job';
+                })
+                _o_scroll_title.html('前往职位列表查看更多职位>>');
+            }else{
+                let date = await job_list.job_list(_p);
+                let _job_data = JSON.parse(date);
+                let _job_list = _job_data.msg;
+                let _template = Handlebars.compile(home_job_list);
+                let _html = _template({_job_list});
+                await $('.list').append(_html);
+                _job_scroll.refresh();
+                flag = true;
+            }
+        }
+    })
+
 }
 
 
