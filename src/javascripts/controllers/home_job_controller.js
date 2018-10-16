@@ -28,6 +28,7 @@ const getJoblist = async (_p)=>{
     let _template = Handlebars.compile(home_job_list);
     let _html = _template({_job_list});
     //这里当他请求完成以后会开启一个两秒的定时器。
+    //将第一个放前面，使他先清空然后在加载字符串模板
     setTimeout(function(){
         $('.list').html('');
     },2000)
