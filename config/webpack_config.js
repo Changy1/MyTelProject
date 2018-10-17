@@ -3,9 +3,10 @@
 const webpack_config = {
     mode: 'production',
     entry: {
-        app: './src/javascripts/app.js'
+        app: './src/javascripts/app.js',
+        register:'./src/javascripts/register.js'
     },
-    // entry: ['./src/javascripts/app.js', './src/javascripts/vendor.js'],
+    // entry: ['./src/javascripts/app.js', './src/javascripts/register.js'],
     output: {
         filename: '[name].js'
     },
