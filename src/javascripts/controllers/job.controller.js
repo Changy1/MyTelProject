@@ -10,6 +10,15 @@ let datasources = [];
 const render = ()=>{
     //初始将job页面渲染到相对应的页面
     $('.home-container').html(job_template);
+    //点击切换
+    $('.more-type').eq(0).on('tap',function(){
+        $(this).parent().addClass('height0');
+        $('.more-type').eq(1).parent().removeClass('height0');
+    })
+    $('.more-type').eq(1).on('tap',function(){
+        $(this).parent().addClass('height0');
+        $('.more-type').eq(0).parent().removeClass('height0');
+    })
     //初始加载第一页
     getJobList(_p);
     handleContentScroll();
