@@ -74,6 +74,12 @@ $('.img_pwd').on('focus', function () {
 $('.register-btn').on('click',function(){
     if($('.email').val()!='' && $('.password').val()!='' && $('.img_pwd').val()!='' && $('.error span').text()==""){
         //将注册信息存入
+        let user=$('.email').val();
+        let pwd=$('.password').val();
+        let obj={user,pwd};
+        document.cookie=setCookie('userinfo',JSON.stringify(obj),1000000,'/');
+        //成功后跳转到登陆页面
+        $('.register-btn a').attr('href','http://localhost:8080/login.html');
     }
 })
 
