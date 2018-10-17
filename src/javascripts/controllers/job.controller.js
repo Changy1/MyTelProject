@@ -52,7 +52,7 @@ const handleContentScroll = ()=>{
     });
     loadmore.on('scrollEnd',function(position){
         _p++;
-        if(position.y <=  this.maxScrollY){
+        if(position.y-this.maxScrollY<= 100 ){
             $('.dropload-refresh span').eq(0).text('');
             $('.dropload-refresh span').eq(0).addClass('loading');
             $('.dropload-refresh span').eq(1).text('加载中...');
