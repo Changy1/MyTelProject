@@ -7,7 +7,7 @@ import BScroll from 'better-scroll';
 let _p= 1;
 //job页面要显示的所有数据
 let datasources = [];
-const render = ()=>{
+const render = async()=>{
     //初始将job页面渲染到相对应的页面
     $('.home-container').html(job_template);
     //点击切换
@@ -43,7 +43,7 @@ const render = ()=>{
         }  
     })
     //初始加载第一页
-    getJobList(_p);
+    await getJobList(_p);
     handleContentScroll();
 }
 //等待获取下一页数据进行渲染
