@@ -7,7 +7,6 @@ let _p = 1;
 const render = ()=>{
     $('.home-container').html(home_job_template);
 
-
     var mySwiper = new Swiper('.swiper-container', {
         autoplay: {
             delay: 2500,//1秒切换一次
@@ -40,7 +39,6 @@ const getJoblist = async (_p)=>{
 //这里是
 const handleContentScroll = async () => {
 
-    let _o_scroll = $('.scroll-info');
     let _o_scroll_title = $('.scroll-info__title');
     //实例化BScroll
     let _job_scroll = new BScroll('.bscroll',{
@@ -49,12 +47,13 @@ const handleContentScroll = async () => {
     await getJoblist();     //初始加载第一页
     _job_scroll.refresh();
 
+    let flag = true;        //这里是一个开关
     _job_scroll.on('scrollEnd', async ({ x , y }) => {
-        let flag = true;
-        if(_job_scroll.maxScrollY - y > 0 && flag ){//可以滚动的最大距离，和当前滚动的距离
-            flag = false;
+        if(_job_scroll.maxScrollY - y > -50 && flag ){//可以滚动的最大距离，和当前滚动的距离
+            flag = false;   //每次进来把开关关闭，然后请求完一次再把开关开启。如果大于4了那么开关就永久关闭了
             _p++;
             if( _p > 4 ){
+                _p = 1 ;            //当不能加载了把p返回1，因为单页面所以一会回来还要从p=1开始
                 _o_scroll_title.on('tap', () => {
                     location.hash = '#/job';
                 })
