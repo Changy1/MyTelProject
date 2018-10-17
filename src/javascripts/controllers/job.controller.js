@@ -19,6 +19,29 @@ const render = ()=>{
         $(this).parent().addClass('height0');
         $('.more-type').eq(0).parent().removeClass('height0');
     })
+    //点击展开列表
+    let stuts=false;
+    $('.type-tab').on('tap',function(){
+        if(!stuts){
+            $('.tab-detail-wrap').css('display','block');
+            $(this).css('color','#02a0e9');
+            //点击li
+            $('.left li').on('tap',function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.middle').css('width','55%');
+            });
+            //点击遮盖层
+            $('.hide-click').on('tap',()=>{
+                $('.tab-detail-wrap').css('display','none');
+                $(this).css('color','#666'); 
+            })
+            stuts=true;
+        }else{
+            $('.tab-detail-wrap').css('display','none');
+            $(this).css('color','#666'); 
+            stuts=false;
+        }  
+    })
     //初始加载第一页
     getJobList(_p);
     handleContentScroll();
