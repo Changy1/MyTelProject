@@ -66,6 +66,9 @@ body{
         font-weight: bold;
         background: url('https://sxsimg.xiaoyuanzhao.com/static/sxs-wap/img/w-login-bbg.png');
         background-size: 100% 100%;
+        a{
+            color: #fff;
+        }
     }
     .login-OR{
         margin: 1.2rem 0 .8rem 0;
@@ -98,4 +101,15 @@ body{
             background-size: 100% 100%;
         }
     }
+}
+.error{
+    position: fixed;
+    bottom: 200px;
+    width: 100%;
+    height: 1.333333rem;
+    color: red;
+    line-height: 1.333333rem;
+    text-align: center;
+    font-size: .373333rem;
+    display: none;
 }

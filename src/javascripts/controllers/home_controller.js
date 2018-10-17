@@ -5,7 +5,7 @@ import home_template from '../views/home.html';
 const render=()=>{
     $('.warp').html(home_template);
     //判断账号密码是否存在
-    if(getCookie('username')){
+    if(getCookie('userinfo')){
         $('.tap-this').attr('href','#/personal')
     }else{
         $('.tap-this').attr('href','http://localhost:8080/login.html')

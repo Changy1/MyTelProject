@@ -9,7 +9,6 @@
     <script src="/static/javascripts/zepto.min.js"></script>
     <script src="/static/javascripts/handlebars-v4.0.12.js"></script>
     <script src='/static/javascripts/cookie.js'></script>
-    <script src="./javascripts/login.js"></script>
     <link rel="stylesheet" href="./stylesheets/login.css"> 
 </head>
 <body>
@@ -24,9 +23,9 @@
             </div>
             <div class='login-forget'>
                 <span>忘记密码</span>
-                <a>去注册</a>
+                <a class='login-register' href='http://localhost:8080/register.html'>去注册</a>
             </div>
-            <div class='login-button'>登录</div>
+                <div class='login-button'><a id='login-a' href='#'>登录</a></div>
             <div class='login-OR'>OR</div>
             <div class='login-other'>
                 <div class='login-other-weibo'></div>
@@ -36,5 +35,9 @@
             </div>
         </div>
     </div>
+    <div class="error">
+        <span></span>
+    </div>
+    <script src="./javascripts/login.js"></script>
 </body>
 </html>
