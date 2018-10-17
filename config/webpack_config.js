@@ -4,7 +4,8 @@ const webpack_config = {
     mode: 'production',
     entry: {
         app: './src/javascripts/app.js',
-        register:'./src/javascripts/register.js'
+        register:'./src/javascripts/register.js',
+        login: './src/javascripts/login.js'
     },
     // entry: ['./src/javascripts/app.js', './src/javascripts/register.js'],
     output: {
