@@ -7,7 +7,7 @@ import BScroll from 'better-scroll';
 let _p= 1;
 //job页面要显示的所有数据
 let datasources = [];
-const render = ()=>{
+const render = async()=>{
     //初始将job页面渲染到相对应的页面
     $('.home-container').html(job_template);
     //点击切换
@@ -18,6 +18,29 @@ const render = ()=>{
     $('.more-type').eq(1).on('tap',function(){
         $(this).parent().addClass('height0');
         $('.more-type').eq(0).parent().removeClass('height0');
+    })
+    //点击展开列表
+    let stuts=false;
+    $('.type-tab').on('tap',function(){
+        if(!stuts){
+            $('.tab-detail-wrap').css('display','block');
+            $(this).css('color','#02a0e9');
+            //点击li
+            $('.left li').on('tap',function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.middle').css('width','55%');
+            });
+            //点击遮盖层
+            $('.hide-click').on('tap',()=>{
+                $('.tab-detail-wrap').css('display','none');
+                $(this).css('color','#666'); 
+            })
+            stuts=true;
+        }else{
+            $('.tab-detail-wrap').css('display','none');
+            $(this).css('color','#666'); 
+            stuts=false;
+        }  
     })
     //初始加载第一页
     getJobList(_p);
@@ -35,7 +58,11 @@ const getJobList= async(_p)=>{
     datasources=[];
     datasources.push(..._job_list);
     // console.log(_job_list);
-    rederJobList();
+    await rederJobList();
+     //点击跳转详情页
+     $('.list-job-item').on('tap',function(){
+        window.location.href='/detail.html';
+    })
 }
 //渲染job页面
 const rederJobList=()=>{
