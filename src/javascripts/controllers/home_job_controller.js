@@ -34,6 +34,12 @@ const getJoblist = async (_p)=>{
     setTimeout(function(){
         $('.list').append(_html);
     },2000)
+    setTimeout(function(){
+        $('.job-list-a').on('tap',() => {
+            console.log(1);
+            window.location.href="http://localhost:8080/detail.html"
+        })
+    },2000)
 }
 
 //这里是
@@ -66,6 +72,9 @@ const handleContentScroll = async () => {
                 let _html = _template({_job_list});
                 await $('.list').append(_html);
                 _job_scroll.refresh();
+                $('.job-list-a').on('tap',() => {
+                    window.location.href="http://localhost:8080/detail.html"
+                })
                 flag = true;
             }
         }
