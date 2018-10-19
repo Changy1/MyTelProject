@@ -43,7 +43,7 @@ const render = async()=>{
         }  
     })
     //初始加载第一页
-    await getJobList(_p);
+    getJobList(_p);
     handleContentScroll();
 }
 //等待获取下一页数据进行渲染
@@ -58,7 +58,11 @@ const getJobList= async(_p)=>{
     datasources=[];
     datasources.push(..._job_list);
     // console.log(_job_list);
-    rederJobList();
+    await rederJobList();
+     //点击跳转详情页
+     $('.list-job-item').on('tap',function(){
+        window.location.href='/detail.html';
+    })
 }
 //渲染job页面
 const rederJobList=()=>{
