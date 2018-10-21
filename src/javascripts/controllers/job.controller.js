@@ -59,10 +59,6 @@ const getJobList= async(_p)=>{
     datasources.push(..._job_list);
     // console.log(_job_list);
     await rederJobList();
-     //点击跳转详情页
-     $('.list-job-item').on('tap',function(){
-        window.location.href='/detail.html';
-    })
 }
 //渲染job页面
 const rederJobList=()=>{
@@ -75,7 +71,8 @@ const rederJobList=()=>{
 const handleContentScroll = ()=>{
     //实例化bsScroll
     let loadmore = new BScroll('.wrapper',{
-            probeType: 2
+            probeType: 2,
+            click: true
     });
     loadmore.on('scrollEnd',function(position){
         _p++;

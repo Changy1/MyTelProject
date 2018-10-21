@@ -34,12 +34,11 @@ const getJoblist = async (_p)=>{
     setTimeout(function(){
         $('.list').append(_html);
     },2000)
-    setTimeout(function(){
+    /* setTimeout(function(){
         $('.job-list-a').on('tap',() => {
-            console.log(1);
             window.location.href="http://localhost:8080/detail.html"
         })
-    },2000)
+    },2000) */
 }
 
 //这里是
@@ -48,7 +47,8 @@ const handleContentScroll = async () => {
     let _o_scroll_title = $('.scroll-info__title');
     //实例化BScroll
     let _job_scroll = new BScroll('.bscroll',{
-        probeType: 2
+        probeType: 2,
+        click: true
     })
     await getJoblist();     //初始加载第一页
     _job_scroll.refresh();
@@ -72,16 +72,15 @@ const handleContentScroll = async () => {
                 let _html = _template({_job_list});
                 await $('.list').append(_html);
                 _job_scroll.refresh();
-                $('.job-list-a').on('tap',() => {
+               /*  $('.job-list-a').on('tap',() => {
                     window.location.href="http://localhost:8080/detail.html"
-                })
+                }) */
                 flag = true;
             }
         }
     })
 
 }
-
 
 export default{
     render
